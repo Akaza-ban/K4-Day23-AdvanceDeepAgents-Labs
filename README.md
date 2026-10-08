@@ -101,7 +101,6 @@ Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json
 
 ## 7. Thời gian, chi phí và an toàn
 
-- **Đã đo** với một bản cài đặt tối giản (lead + `researcher` + `citation-checker`): khoảng **2 phút** và **~170 nghìn token** cho một chủ đề. Bộ khung đầy đủ của giảng viên (thêm critic, trend-scout, bộ nhớ, ngân sách token) chạy **4-8 phút** và **0,9-1,4 triệu token** mỗi chủ đề. Năm chủ đề nhân lên tương ứng.
 - Dùng một mô hình **rẻ nhưng hỗ trợ tool calling**, và **đặt giới hạn** (số lần gọi mô hình/công cụ cho lead và subagent, `recursion_limit`): một prompt hỏng có thể khiến agent lặp rất lâu. Đây là hạng mục 2.5 của `RUBRIC.md`.
 - Kết quả có tính ngẫu nhiên: cùng một mã có thể cho báo cáo hợp lệ ở lần này và trích dẫn lỗi ở lần sau. Hãy sửa **prompt và mã**, không sửa tay báo cáo.
 
