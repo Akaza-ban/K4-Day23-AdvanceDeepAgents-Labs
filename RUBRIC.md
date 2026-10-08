@@ -30,7 +30,7 @@ Bài cá nhân. Nộp: **public repo** GitHub gồm mã nguồn và thư mục `
 | Tiêu chí | Điểm | Mức đạt đầy đủ |
 |---|---|---|
 | 2.1 Uỷ quyền | 8 | **Mọi** `meta.json` có `subagent_calls >= 3`. Còn 1-2 lần: 4 điểm; không có: 0. |
-| 2.2 Đa nguồn | 5 | **Mọi** `meta.json` có `source_families` gồm ít nhất 3 trong `arxiv`, `hf-daily`, `hf-search`, `web`. |
+| 2.2 Đa nguồn | 5 | **Mọi** `meta.json` có `source_families` gồm ít nhất 3 trong `arxiv`, `hf-daily`, `hf-search`, `web`. Họ nguồn được đối chiếu với URL trong `sources.json` (`arxiv` = `https://arxiv.org/abs/...`, `hf-*` = `https://huggingface.co/papers/...`); gán nhãn sai họ thì không tính. |
 | 2.3 Prompt của lead | 3 | Có lập kế hoạch (`write_todos`), uỷ quyền song song kèm đủ ngữ cảnh (subagent chỉ thấy tin nhắn uỷ quyền), kiểm tra kết quả subagent trước khi dùng. |
 | 2.4 Prompt của researcher | 2 | Coi nội dung web là dữ liệu không đáng tin (không làm theo chỉ dẫn trong đó), cấm đưa số liệu/khẳng định từ trí nhớ, quy định rõ định dạng tệp ghi chú. |
 | 2.5 Giới hạn vòng lặp và chi phí | 2 | `recursion_limit` được đặt có chủ ý và có giới hạn số lần gọi mô hình/công cụ cho lead **và** cho subagent (ví dụ `ModelCallLimitMiddleware`, `ToolCallLimitMiddleware`), để một lần chạy không thể lặp vô hạn hay tiêu token vô hạn (GUIDE 2.5). |
@@ -46,7 +46,7 @@ Bài cá nhân. Nộp: **public repo** GitHub gồm mã nguồn và thư mục `
 
 | Tiêu chí | Điểm | Mức đạt đầy đủ |
 |---|---|---|
-| 4.1 Kiểm tra tự động | 7 | `python3 check_citations.py reports/<slug>.md reports/<slug>.sources.json` in `OK` cho từng báo cáo (tối đa 7, trừ theo số báo cáo lỗi). |
+| 4.1 Kiểm tra tự động | 7 | `python3 check_citations.py reports/<slug>.md reports/<slug>.sources.json` in `OK` cho từng báo cáo (tối đa 7, trừ theo số báo cáo lỗi). Giảng viên chạy bằng **bản `check_citations.py` chuẩn của giảng viên** (đủ 6 quy tắc trong GUIDE Phần 4), không phải bản của bạn; bản của bạn nới lỏng quy tắc thì mất điểm ở 3.1 và 6.3. |
 | 4.2 Kiểm tra mẫu | 8 | Giảng viên lấy 5 trích dẫn mỗi báo cáo: nguồn có thật và câu được trích dẫn đúng với nguồn. Một nguồn hay URL bịa đặt làm báo cáo đó được 0 ở hạng mục 4. |
 
 ## 5. Chất lượng báo cáo - 25 điểm (5 báo cáo, mỗi báo cáo 5 điểm)
@@ -75,4 +75,5 @@ Mỗi báo cáo được chấm theo `REPORT_TEMPLATE.md`:
 - **Chạy `python self_check.py` trước khi nộp**: nó kiểm tra phần tự động của thang điểm này (đủ 5 báo cáo, `meta.json`, trích dẫn qua `check_citations.py` của bạn, không lộ khóa trong git). Không tốn token, không cần mạng.
 - Không sửa `model.py`, `sandbox.py`. Giảng viên chạy lại với bản gốc của hai tệp này.
 - Báo cáo phải do hệ thống của bạn sinh ra. Sửa tay nội dung báo cáo sau khi chạy là gian lận.
+- Tệp `reports/<slug>.md` và `.sources.json` nộp lên phải **đúng bản đã tải về từ sandbox**. Mọi bước sửa trích dẫn bằng mã (`finalize_citations.py`, GUIDE mục 2.6, hay bản mở rộng ở Phần 6) phải chạy **trong sandbox, trước khi validator in `OK`**, không chạy ở host sau khi tải về.
 - Chấm điểm dựa trên `reports/` đã nộp. Có thể bị chạy lại một chủ đề để đối chiếu.

@@ -30,6 +30,8 @@ Các nguồn bị giới hạn tốc độ và thỉnh thoảng lỗi tạm th�
 - Tham số: `search_query` (ví dụ `all:world AND all:model`), `sortBy=submittedDate`, `sortOrder=descending`, `max_results`, `start`.
 - Kết quả là **Atom XML** (namespace `http://www.w3.org/2005/Atom`). Mỗi `<entry>` có `<id>` (URL dạng `http://arxiv.org/abs/2501.00001v1`), `<published>`, `<title>`, `<summary>`. Tiêu đề và tóm tắt có xuống dòng và khoảng trắng thừa: chuẩn hóa chúng.
 - Giữ **ít nhất 3 giây** giữa hai lời gọi arXiv (quy ước sử dụng API của họ).
+- Chuẩn hóa bản ghi: `id` bỏ hậu tố phiên bản (`2501.00001v1` → `2501.00001`) và `url = https://arxiv.org/abs/<id>` (HTTPS, không có `vN`), khớp với `REPORT_TEMPLATE.md`.
+- arXiv cũng trả **HTTP 429** khi nhiều người dùng chung một địa chỉ IP (cả lớp sau một mạng trường): cho arXiv `cap` dài hơn (ví dụ 60 giây) và vài lần thử nữa thay vì bỏ cuộc sớm.
 - Truy vấn là input do LLM sinh ra: chỉ giữ các ký tự chữ/số/gạch nối để dấu nháy, dấu hai chấm hay `AND/OR` thừa không làm hỏng truy vấn; không còn từ nào thì trả `NO RESULTS` mà không gọi mạng.
 
 ### 1.3 Hugging Face (TODO 3)
@@ -51,8 +53,8 @@ curl -s -X POST https://mcp.exa.ai/mcp \
 - Header `Accept` phải có `text/event-stream`. Phản hồi là **server-sent events**: tìm dòng bắt đầu bằng `data:` rồi `json.loads` phần còn lại. Nội dung văn bản nằm ở `result.content[].text` (các phần tử có `type == "text"`).
 - Công cụ: `web_search_exa` (bắt buộc `query`, `objective`; tùy chọn `numResults`) và `web_fetch_exa` (bắt buộc `urls`, **một mảng**). Xem danh sách bằng `{"jsonrpc":"2.0","id":1,"method":"tools/list"}`.
 - Lỗi JSON-RPC có khóa `error` thay cho `result`: biến nó thành lỗi.
-- **Cẩn thận với giới hạn tốc độ.** Bản miễn phí không trả HTTP 429: nó trả **HTTP 200** kèm một thông báo trong văn bản, và đặt cờ trong `result._meta`. Hãy chạy `curl` ở trên vài lần liên tiếp và nhìn kỹ `result._meta`. Nếu bạn không phát hiện ra, agent sẽ coi thông báo giới hạn tốc độ là "nội dung trang" và nghiên cứu sai. Phát hiện cờ đó và **retry** (thường hết sau chừng 20 giây).
-- Khóa tùy chọn `EXA_API_KEY` (lấy ở https://dashboard.exa.ai/api-keys) được gắn vào URL của endpoint dưới dạng tham số truy vấn `exaApiKey`: `https://mcp.exa.ai/mcp?exaApiKey=<khóa>`. Hệ quả: **khóa có thể lọt vào văn bản của ngoại lệ** (thông báo lỗi `httpx` chứa cả URL). Hãy che khóa trước khi trả `ERROR: ...` cho agent.
+- **Cẩn thận với giới hạn tốc độ.** Bản miễn phí không trả HTTP 429: nó trả **HTTP 200** kèm một thông báo trong văn bản, và đặt cờ trong `result._meta`. Hãy chạy `curl` ở trên vài lần liên tiếp và nhìn kỹ `result._meta`. Nếu bạn không phát hiện ra, agent sẽ coi thông báo giới hạn tốc độ là "nội dung trang" và nghiên cứu sai. Phát hiện cờ đó và **retry**. Khi một người dùng thì thường hết sau chừng 20 giây; khi **cả lớp dùng chung một IP** thì có thể kéo dài nhiều phút, vượt mọi số lần retry hợp lý — vì vậy **hãy lấy `EXA_API_KEY` miễn phí** trước buổi lab, và cho Exa `cap` dài (ví dụ 60 giây) với đủ số lần thử.
+- Khóa tùy chọn `EXA_API_KEY` được gắn vào URL của endpoint dưới dạng tham số truy vấn (hiện là `exaApiKey`, ví dụ `https://mcp.exa.ai/mcp?exaApiKey=<khóa>`; chính thông báo giới hạn tốc độ của Exa cũng nêu tên này — kiểm lại trên https://dashboard.exa.ai/api-keys nếu nó đổi). Hệ quả: **khóa có thể lọt vào văn bản của ngoại lệ** (thông báo lỗi `httpx` chứa cả URL). Hãy che khóa trước khi trả `ERROR: ...` cho agent.
 - `web_fetch` cắt nội dung còn khoảng 12000 ký tự.
 
 ### 1.5 Đăng ký công cụ (TODO 5)
@@ -70,11 +72,11 @@ Quy ước không gian làm việc (cho sẵn trong tệp), tất cả là đư�
 | `VALIDATOR_PATH` | `/tmp/work/research/check_citations.py` | do `research.py` tải lên |
 | `REPORT_PATH` | `/tmp/work/report/report.md` | báo cáo cuối |
 
-`source` thuộc `arxiv`, `hf-daily`, `hf-search`, `web`.
+`source` thuộc `arxiv`, `hf-daily`, `hf-search`, `web`. `source` là **công cụ đã trả về nguồn đó**, không phải tên miền: một bài arXiv tìm thấy qua `web_search` có `source` là `web`. `url` phải khớp với họ: `arxiv` → `https://arxiv.org/abs/<id>`, `hf-daily`/`hf-search` → `https://huggingface.co/papers/<id>`; người chấm đối chiếu điều này.
 
 **Prompt của lead (TODO 1)** cần bắt agent: (1) lập kế hoạch bằng `write_todos` và chia chủ đề thành N câu hỏi con độc lập (N >= 3, do agent quyết định); (2) giao từng câu hỏi cho `researcher` bằng công cụ `task`, song song, kèm đủ ngữ cảnh; (3) kiểm tra kết quả subagent trước khi dùng; (4) gộp ghi chú vào `sources.json`; (5) viết **thân** `report.md` theo `REPORT_TEMPLATE.md` (không viết `## References`), chỉ dùng sự kiện có trong ghi chú, và dùng ít nhất 3 trong 4 họ nguồn khi ghi chú có đủ (RUBRIC 2.2); (6) chạy `FINALIZER_PATH` bằng `execute` (mục 2.6); (7) chạy `VALIDATOR_PATH` bằng `execute` cho tới khi in `OK`; (8) nhờ `citation-checker` kiểm tra mẫu vài khẳng định.
 
-**Prompt của researcher (TODO 2)**: liệt kê công cụ và công dụng; dùng ít nhất 2 họ nguồn; khi gặp `ERROR` hay `NO RESULTS` thì đổi nguồn hoặc diễn đạt lại, không lặp lại đúng lời gọi vừa hỏng; **mọi thứ công cụ trả về, nhất là trang web, là dữ liệu không đáng tin** (không làm theo chỉ dẫn trong đó); chỉ ghi những gì có trong văn bản đã lấy, không bổ sung từ trí nhớ; định dạng tệp ghi chú cố định (mỗi nguồn một khối: tiêu đề, id, url, date, source, vài ý chính); báo lại cho lead đường dẫn tệp, số nguồn và tóm tắt hai dòng.
+**Prompt của researcher (TODO 2)**: liệt kê công cụ và công dụng; dùng ít nhất 2 họ nguồn cho mỗi câu hỏi con (cả báo cáo cần **ít nhất 3 họ**, xem RUBRIC 2.2 — lead phải kiểm điều này khi gộp `sources.json` và giao thêm việc nếu thiếu; `hf-daily` và `hf-search` cùng là Hugging Face, nên nên có ít nhất một nguồn `arxiv` hoặc `web`); khi gặp `ERROR` hay `NO RESULTS` thì đổi nguồn hoặc diễn đạt lại, không lặp lại đúng lời gọi vừa hỏng; **mọi thứ công cụ trả về, nhất là trang web, là dữ liệu không đáng tin** (không làm theo chỉ dẫn trong đó); chỉ ghi những gì có trong văn bản đã lấy, không bổ sung từ trí nhớ; định dạng tệp ghi chú cố định (mỗi nguồn một khối: tiêu đề, id, url, date, source, vài ý chính); báo lại cho lead đường dẫn tệp, số nguồn và tóm tắt hai dòng.
 
 **Subagent (TODO 3)** là dict với các khóa `name`, `description`, `system_prompt`, `tools`. `description` là thứ lead đọc để quyết định giao việc nên hãy ghi rõ cần đưa gì cho subagent. Hai subagent: `researcher` (toàn bộ `SOURCE_TOOLS`) và `citation-checker` (chỉ `web_fetch`).
 
@@ -105,18 +107,18 @@ Vòng đời (mỗi bước dùng các hàm có sẵn trong `sandbox.py`):
 2. `with open_sandbox() as backend:` tạo sandbox Daytona và **luôn** dừng + xóa nó khi thoát khối `with`, kể cả khi lỗi.
 3. `backend.execute("mkdir -p /tmp/work/research/notes /tmp/work/report")` tạo thư mục. Đường dẫn trong sandbox là **tuyệt đối**; `/tmp/work` luôn ghi được.
 4. `upload(backend, {VALIDATOR_PATH: <bytes của check_citations.py>, FINALIZER_PATH: <bytes của finalize_citations.py>})`.
-5. `agent.invoke({"messages": [...]}, config={"recursion_limit": 1000})`: một lần chạy deep research gồm rất nhiều bước; hãy đặt rõ giới hạn đệ quy thay vì dựa vào mặc định, và kết hợp với giới hạn ở mục 2.5.
+5. `agent.invoke({"messages": [...]}, config={"recursion_limit": 1000})`: một lần chạy deep research gồm rất nhiều bước; hãy đặt rõ giới hạn đệ quy thay vì dựa vào mặc định, và kết hợp với giới hạn ở mục 2.5. Mỗi lượt model → tool tốn khoảng 2 bước; vượt giới hạn thì LangGraph **ném** `GraphRecursionError`, không dừng êm. `recursion_limit` này **chỉ** áp cho graph của lead: subagent chạy graph riêng với giới hạn 9999 gắn sẵn (config của subagent thắng khi trùng khóa), nên subagent phải được giới hạn bằng khóa `middleware` (mục 2.5).
 6. `download(backend, [REPORT_PATH, SOURCES_PATH])` trả `{đường_dẫn: bytes hoặc None}`; `None` nghĩa là tệp không có.
 
 `save_outputs` ghi ba tệp vào `reports/`: `<slug>.md`, `<slug>.sources.json`, `<slug>.meta.json`. **Nếu agent không tạo ra báo cáo (hoặc báo cáo rỗng, hoặc `sources.json` hỏng) thì phải báo lỗi và không ghi gì cả**: một lần chạy hỏng không được để lại báo cáo rỗng trông như thành công; `main` thoát với mã 1.
 
 `slugify(topic)`: chủ đề là input của người dùng, ví dụ `../../x` không được thoát khỏi `reports/`; chủ đề rỗng trả `topic`; chuỗi dài bị cắt còn 60 ký tự.
 
-`<slug>.meta.json` là **bằng chứng chấm điểm**: `topic`, `model`, `elapsed_s`, `subagent_calls` (số lần gọi công cụ `task` của lead), `tool_calls`, `tokens`, `n_sources`, `source_families` (các giá trị `source` khác nhau trong `sources.json`).
+`<slug>.meta.json` là **bằng chứng chấm điểm**: `topic`, `model`, `elapsed_s`, `subagent_calls` (số lần gọi công cụ `task` của lead), `tool_calls`, `tokens`, `n_sources`, `source_families` (các giá trị `source` khác nhau trong `sources.json`). `tokens` chỉ đếm tin nhắn của lead; token của subagent (thường là phần lớn chi phí) không nằm trong đó.
 
 ### 2.6 Script hoàn thiện trích dẫn có sẵn (`finalize_citations.py`)
 
-Khi để LLM tự viết và đánh số `## References`, nó hay gộp nhiều bài dưới một số hoặc làm lệch số so với `sources.json` (đã gặp ở các lần chạy thử, cả với agent mạnh). Vì vậy bộ khung kèm sẵn `finalize_citations.py`, chạy **trong sandbox**: xóa nguồn không được trích dẫn, gộp URL trùng, đánh số lại `[n]` theo thứ tự xuất hiện, chuẩn hóa `[1, 2]`/`[1-3]` thành `[1][2]`, tự sinh `## References` (một dòng cho mỗi nguồn) và ghi lại `sources.json`. `research.py` tải nó lên cùng `check_citations.py` (`FINALIZER_PATH`). Lead **viết thân báo cáo không có `## References`**, chạy script này (không tham số; chạy lại sau mỗi lần sửa thân báo cáo), rồi mới chạy validator của bạn. Bài học: xử lý tất định sau LLM đáng tin hơn là cố viết prompt cho LLM làm đúng. Validator của bạn vẫn là hạng mục chấm điểm (RUBRIC 4.1).
+Khi để LLM tự viết và đánh số `## References`, nó hay gộp nhiều bài dưới một số hoặc làm lệch số so với `sources.json` (đã gặp ở các lần chạy thử, cả với agent mạnh). Vì vậy bộ khung kèm sẵn `finalize_citations.py`, chạy **trong sandbox**: xóa nguồn không được trích dẫn, gộp URL trùng, đánh số lại `[n]` theo thứ tự xuất hiện, chuẩn hóa `[1, 2]`/`[1-3]` thành `[1][2]`, tự sinh `## References` (một dòng cho mỗi nguồn) và ghi lại `sources.json`. `research.py` tải nó lên cùng `check_citations.py` (`FINALIZER_PATH`). Lead **viết thân báo cáo không có `## References`**, chạy script này (không tham số; chạy lại sau mỗi lần sửa thân báo cáo), rồi mới chạy validator của bạn. Cẩn thận: vì script xóa nguồn không được trích dẫn, nó có thể làm mất cả một họ nguồn; hãy kiểm lại `source_families` sau bước này (RUBRIC 2.2). Bài học: xử lý tất định sau LLM đáng tin hơn là cố viết prompt cho LLM làm đúng. Validator của bạn vẫn là hạng mục chấm điểm (RUBRIC 4.1).
 
 ## 4. `check_citations.py` (TODO)
 
@@ -138,6 +140,8 @@ Chạy từng chủ đề trong `topics.md`, rồi chạy `check_citations.py` t
 |---|---|
 | `web_search` toàn trả văn bản nói về giới hạn tốc độ | Chưa phát hiện cờ `_meta` của Exa (mục 1.4); hoặc chưa có `EXA_API_KEY`. |
 | Tool trả `NO RESULTS` liên tục | Truy vấn quá dài/cụ thể: viết lại bằng vài từ khóa. |
+| `arxiv_search` trả `ERROR: ... HTTP 429` | arXiv giới hạn theo IP; cả lớp dùng chung mạng thì rất dễ gặp. Tăng `cap`/số lần thử cho arXiv, chạy lệch giờ với bạn cùng lớp; nếu vẫn thiếu họ `arxiv`, lead phải bù bằng họ khác để đủ 3 họ. |
+| `source_families` chỉ có 2 họ | Prompt chỉ yêu cầu "ít nhất 2 họ" cho researcher; lead phải kiểm tổng số họ khi gộp `sources.json` và giao thêm việc nếu thiếu (RUBRIC 2.2). |
 | Agent dừng mà không có `report.md` | Prompt của lead thiếu bước 4-5; hoặc đụng giới hạn đệ quy. |
 | `subagent_calls` bằng 0 | Prompt không bắt giao việc, hoặc `description` của subagent quá mơ hồ. |
 | Lỗi tạo sandbox | Sai `DAYTONA_API_KEY` hoặc hết hạn mức: dừng/xóa các sandbox cũ trong dashboard Daytona, hoặc đặt `SANDBOX=docker` để dùng container Docker cục bộ. |
@@ -159,6 +163,7 @@ Các tính năng giúp hệ thống chạy dài hơi và an toàn hơn (mỗi m�
 
 ## 7. Tự kiểm tra trước khi nộp
 
+- [ ] (Khuyến khích) viết vài test cho `with_retry`, `slugify`, `check_citations` (mock `time.sleep`); `pytest` không có trong `requirements.txt`, cài thêm bằng `pip install pytest` nếu dùng.
 - [ ] `python tools.py` cho kết quả thật ở cả 5 công cụ (có thể mất thời gian vì retry).
 - [ ] Mỗi báo cáo có `subagent_calls >= 3` và `source_families` có ít nhất 3 họ nguồn trong `meta.json`.
 - [ ] `python3 check_citations.py reports/<slug>.md reports/<slug>.sources.json` in `OK` cho cả 5 báo cáo (gồm một dòng tham khảo cho mỗi nguồn).
