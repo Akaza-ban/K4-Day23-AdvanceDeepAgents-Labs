@@ -11,7 +11,8 @@ from tools import SOURCE_TOOLS, web_fetch  # noqa: F401
 WORKDIR = "/tmp/work"
 NOTES_DIR = f"{WORKDIR}/research/notes"                    # researcher notes: <NN>-<slug>.md
 SOURCES_PATH = f"{WORKDIR}/research/sources.json"          # JSON array of {n, id, url, title, date, source}
-VALIDATOR_PATH = f"{WORKDIR}/research/check_citations.py"  # uploaded by research.py
+VALIDATOR_PATH = f"{WORKDIR}/research/check_citations.py"  # YOUR validator, uploaded by research.py
+FINALIZER_PATH = f"{WORKDIR}/research/finalize_citations.py"  # PROVIDED script, uploaded by research.py
 REPORT_PATH = f"{WORKDIR}/report/report.md"                # the final report
 # source is one of: "arxiv" | "hf-daily" | "hf-search" | "web"
 
@@ -24,10 +25,15 @@ It must make the lead agent (use an f-string so the paths above are inserted):
      the delegation message, so the message must carry the topic, the sub-question, the notes path and the note format;
   3. check what each subagent returns before relying on it;
   4. merge the notes into SOURCES_PATH (schema above, numbered from 1, no duplicate URLs);
-  5. write REPORT_PATH following REPORT_TEMPLATE.md: synthesis by theme, inline [n] citations, a `## References` section;
-     only facts found in the notes, never invented sources or numbers;
-  6. run VALIDATOR_PATH with the `execute` tool and fix problems until it prints OK;
-  7. have `citation-checker` spot-check a few claims.
+  5. write REPORT_PATH following REPORT_TEMPLATE.md: synthesis by theme, inline [n] citations; only facts found in the
+     notes, never invented sources or numbers. Do NOT write the `## References` section: the provided script does it.
+     The final report must draw on at least 3 of the 4 source families (arxiv, hf-daily, hf-search, web) whenever the
+     notes contain them (RUBRIC 2.2): cite the most relevant Hugging Face papers, not only arXiv and web pages;
+  6. run FINALIZER_PATH with the `execute` tool (no arguments, run it again after every edit of the report body): it
+     drops sources the text never cites, merges duplicate URLs, renumbers [n] by first appearance, generates
+     `## References` (one line per source) and rewrites sources.json;
+  7. run VALIDATOR_PATH with the `execute` tool and fix problems until it prints OK;
+  8. have `citation-checker` spot-check a few claims.
 """
 
 # ---- TODO 2: the researcher and citation-checker prompts ----
@@ -56,7 +62,8 @@ def build_subagents():
 # ---- TODO 4: the lead agent ----
 def build_lead_agent(backend, model):
     """Return create_deep_agent(model=model, system_prompt=LEAD_PROMPT, subagents=build_subagents(), backend=backend,
-    middleware=[TodoListMiddleware()]).  (deepagents 0.7.x has NO built-in write_todos: add the middleware yourself.)
+    middleware=[TodoListMiddleware(), *LEAD_LIMITS]).  (deepagents 0.7.x has NO built-in write_todos: add the middleware
+    yourself. Add the call/tool limits of GUIDE 2.5 here AND in every subagent spec, key "middleware".)
 
     `backend` is the Daytona sandbox from sandbox.open_sandbox(): it gives the agent the file tools and `execute`.
     """

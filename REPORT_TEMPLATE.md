@@ -31,6 +31,8 @@ What is changing in the last two years, what is unsolved, which results are stil
 
 ## Quy tắc trích dẫn
 
+> Phần `## References` **không do LLM viết tay**: lead viết thân báo cáo rồi chạy `finalize_citations.py` (có sẵn) để sinh nó đúng quy tắc 3 dưới đây.
+
 1. Mọi khẳng định không hiển nhiên phải có trích dẫn dạng `[n]`.
 2. Mọi `[n]` phải có trong `sources.json` (cùng số `n`); mọi mục trong `sources.json` phải được trích dẫn ít nhất một lần trong phần thân.
 3. Danh sách `## References` đặt ở **cuối** báo cáo: **một dòng cho mỗi nguồn**, dạng `[n] Tiêu đề. <source>. URL (ngày)`, chứa **đúng một URL** và URL đó bằng `url` trong `sources.json`. Không gộp nhiều nguồn dưới một số.

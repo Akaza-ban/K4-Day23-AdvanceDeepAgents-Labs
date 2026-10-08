@@ -11,13 +11,14 @@ import time  # noqa: F401
 from collections import Counter  # noqa: F401
 from pathlib import Path
 
-from agents import REPORT_PATH, SOURCES_PATH, VALIDATOR_PATH, WORKDIR, build_lead_agent  # noqa: F401
+from agents import FINALIZER_PATH, REPORT_PATH, SOURCES_PATH, VALIDATOR_PATH, WORKDIR, build_lead_agent  # noqa: F401
 from model import make_model  # noqa: F401
 from sandbox import download, open_sandbox, upload  # noqa: F401
 
 ROOT = Path(__file__).parent
 REPORTS = ROOT / "reports"
 VALIDATOR_SOURCE = ROOT / "check_citations.py"
+FINALIZER_SOURCE = ROOT / "finalize_citations.py"   # provided: uploaded next to your validator
 
 
 def slugify(topic):
@@ -62,10 +63,10 @@ def main(topic):
       model = make_model(); start = time.monotonic()
       with open_sandbox() as backend:                # the sandbox is always cleaned up, even on errors
           backend.execute("mkdir -p <WORKDIR>/research/notes <WORKDIR>/report")
-          upload(backend, {VALIDATOR_PATH: VALIDATOR_SOURCE.read_bytes()})
+          upload(backend, {VALIDATOR_PATH: VALIDATOR_SOURCE.read_bytes(), FINALIZER_PATH: FINALIZER_SOURCE.read_bytes()})
           agent = build_lead_agent(backend, model)
           result = agent.invoke({"messages": [{"role": "user", "content": build_prompt(topic)}]},
-                                config={"recursion_limit": 300})
+                                config={"recursion_limit": 1000})
           save_outputs(...); on RuntimeError print "FAILED: ..." to stderr and return 1
       print where the report was saved; return 0
     """

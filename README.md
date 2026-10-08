@@ -26,7 +26,8 @@ flowchart TD
     R --> T3["web_search / web_fetch (Exa MCP)"]
     R --> N["ghi chú trong sandbox: /tmp/work/research/notes"]
     N --> M["Lead gộp: sources.json + report.md"]
-    M --> V["execute: check_citations.py"]
+    M --> F["execute: finalize_citations.py (có sẵn)"]
+    F --> V["execute: check_citations.py"]
     V --> C["citation-checker subagent kiểm tra mẫu"]
     C --> D["download -> reports/slug.md, .sources.json, .meta.json"]
 ```
@@ -48,7 +49,9 @@ Lab/
 ├── topics.md                 5 chủ đề cần chạy
 ├── requirements.txt  .env.example  .gitignore
 ├── model.py                  CÓ SẴN - không sửa: tạo mô hình LLM từ biến môi trường
-├── sandbox.py                CÓ SẴN - không sửa: tạo / dọn sandbox Daytona, upload, download
+├── sandbox.py                CÓ SẴN - không sửa: sandbox Daytona (hoặc Docker), upload, download
+├── self_check.py             CÓ SẴN - không sửa: tự kiểm tra trước khi nộp (python self_check.py)
+├── finalize_citations.py     CÓ SẴN - không sửa: script chạy trong sandbox, tự sinh `## References` và đánh số lại trích dẫn
 ├── tools.py                  SINH VIÊN CÀI ĐẶT: retry + 5 công cụ nguồn dữ liệu
 ├── agents.py                 SINH VIÊN CÀI ĐẶT: prompt, subagent, lead agent
 ├── research.py               SINH VIÊN CÀI ĐẶT: script chính
@@ -71,7 +74,7 @@ Bạn cần ba loại khóa (điền vào `.env`, **không bao giờ commit** `.
 | Khóa | Lấy ở đâu | Ghi chú |
 |---|---|---|
 | LLM (`LAB_MODEL` + khóa nhà cung cấp) | Nhà cung cấp bạn chọn (OpenAI, Anthropic, Google, OpenRouter, Ollama...) | Mô hình **phải hỗ trợ tool calling**. Chép tên mô hình từ tài liệu của nhà cung cấp. |
-| `DAYTONA_API_KEY` | https://app.daytona.io | Kiểm tra gói miễn phí / credit hiện hành. |
+| `DAYTONA_API_KEY` | https://app.daytona.io | Kiểm tra gói miễn phí / credit hiện hành. Không có tài khoản hoặc hết credit: đặt `SANDBOX=docker` để chạy sandbox trong container Docker cục bộ (xem `.env.example`). |
 | `EXA_API_KEY` (khuyến nghị) | https://dashboard.exa.ai/api-keys | Có thể chạy không khóa, nhưng bản miễn phí của MCP bị giới hạn tốc độ rất nhanh. |
 
 ## 5. Làm bài
@@ -93,10 +96,14 @@ Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json
 
 - Chạy đủ **5 chủ đề** trong [`topics.md`](topics.md), mỗi chủ đề một lần.
 - Commit mã nguồn và toàn bộ `reports/`, đẩy lên một **public repo** GitHub và nộp link.
-- Kiểm tra trước khi nộp: không có `.env` hay khóa nào trong repo; `check_citations.py` in `OK` cho cả 5 báo cáo.
+- Kiểm tra trước khi nộp: chạy **`python self_check.py`** (không tốn token): nó kiểm tra đủ 5 báo cáo, `meta.json`, trích dẫn bằng `check_citations.py` của bạn, và không có `.env`/khóa nào trong git.
 - Cách chấm: xem [`RUBRIC.md`](RUBRIC.md).
 
-## 7. Chi phí và an toàn
+## 7. Thời gian, chi phí và an toàn
+
+- **Đã đo** với một bản cài đặt tối giản (lead + `researcher` + `citation-checker`): khoảng **2 phút** và **~170 nghìn token** cho một chủ đề. Bộ khung đầy đủ của giảng viên (thêm critic, trend-scout, bộ nhớ, ngân sách token) chạy **4-8 phút** và **0,9-1,4 triệu token** mỗi chủ đề. Năm chủ đề nhân lên tương ứng.
+- Dùng một mô hình **rẻ nhưng hỗ trợ tool calling**, và **đặt giới hạn** (số lần gọi mô hình/công cụ cho lead và subagent, `recursion_limit`): một prompt hỏng có thể khiến agent lặp rất lâu. Đây là hạng mục 2.5 của `RUBRIC.md`.
+- Kết quả có tính ngẫu nhiên: cùng một mã có thể cho báo cáo hợp lệ ở lần này và trích dẫn lỗi ở lần sau. Hãy sửa **prompt và mã**, không sửa tay báo cáo.
 
 - Mỗi lần chạy tốn token LLM và thời gian sandbox. `open_sandbox()` luôn dừng và xóa sandbox khi kết thúc, kể cả khi lỗi. Đừng bỏ qua nó.
 - **Không đưa bí mật vào sandbox.** Sandbox không ngăn được prompt injection hay việc đẩy dữ liệu ra mạng; một trang web độc hại có thể khiến agent chạy lệnh bên trong sandbox. Vì vậy mọi công cụ gọi mạng và mọi khóa ở lại phía host.
