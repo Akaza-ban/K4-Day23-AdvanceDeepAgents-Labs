@@ -37,6 +37,7 @@ def summarize(messages, elapsed, model_name):
 
     PSEUDO-CODE: walk the lead's messages; for every message with tool_calls count call["name"] (subagent_calls = the
     count of "task"); add the input/output token counts from each message's usage_metadata when present.
+    (Lead messages only: subagent tokens are not included, so this undercounts the real cost.)
     elapsed_s rounded to 0.1.
     """
     raise NotImplementedError("TODO 3: summarize")
