@@ -1,0 +1,402 @@
+[
+  {
+    "n": 1,
+    "id": "1707.06347",
+    "url": "https://arxiv.org/abs/1707.06347",
+    "title": "Proximal Policy Optimization Algorithms",
+    "date": "2017-07-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2402.03300",
+    "url": "https://arxiv.org/abs/2402.03300",
+    "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+    "date": "2024-02-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "2507.04136",
+    "url": "https://arxiv.org/abs/2507.04136",
+    "title": "A Technical Survey of Reinforcement Learning Techniques for Large Language Models",
+    "date": "2025-07-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2506.14245",
+    "url": "https://arxiv.org/abs/2506.14245",
+    "title": "Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs",
+    "date": "2025-06-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 5,
+    "id": "2402.14740",
+    "url": "https://arxiv.org/abs/2402.14740",
+    "title": "Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs",
+    "date": "2024-02-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "2503.14476",
+    "url": "https://arxiv.org/abs/2503.14476",
+    "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "date": "2025-03-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 7,
+    "id": "2503.20783",
+    "url": "https://arxiv.org/abs/2503.20783",
+    "title": "Understanding R1-Zero-Like Training: A Critical Perspective",
+    "date": "2025-03-26",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2507.18071",
+    "url": "https://arxiv.org/abs/2507.18071",
+    "title": "Group Sequence Policy Optimization",
+    "date": "2025-07-28",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2503.14286",
+    "url": "https://arxiv.org/abs/2503.14286",
+    "title": "Tapered Off-Policy REINFORCE: Stable and efficient reinforcement learning for LLMs",
+    "date": "2025-03-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "opml2025-mismatch",
+    "url": "https://opt-ml.org/papers/2025/paper116.pdf",
+    "title": "On the Rollout-Training Mismatch in Modern RL Systems",
+    "date": "2025-07-01",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "lets-verify-step-by-step",
+    "url": "https://cdn.openai.com/improving-mathematical-reasoning-with-process-supervision/Lets%5FVerify%5FStep%5Fby%5FStep.pdf",
+    "title": "Let's Verify Step by Step",
+    "date": "2023-05-31",
+    "source": "web"
+  },
+  {
+    "n": 12,
+    "id": "openai-process-supervision",
+    "url": "https://openai.com/index/improving-mathematical-reasoning-with-process-supervision/",
+    "title": "Improving mathematical reasoning with process supervision",
+    "date": "2023-05-31",
+    "source": "web"
+  },
+  {
+    "n": 13,
+    "id": "2505.22203",
+    "url": "https://huggingface.co/papers/2505.22203",
+    "title": "Pitfalls of Rule- and Model-based Verifiers -- A Case Study on Mathematical Reasoning",
+    "date": "2025-05-28",
+    "source": "hf-search"
+  },
+  {
+    "n": 14,
+    "id": "2505.15801",
+    "url": "https://huggingface.co/papers/2505.15801",
+    "title": "VerifyBench: Benchmarking Reference-based Reward Systems for Large Language Models",
+    "date": "2025-05-21",
+    "source": "hf-search"
+  },
+  {
+    "n": 15,
+    "id": "2510.01925",
+    "url": "https://arxiv.org/abs/2510.01925",
+    "title": "Enhancing Large Language Model Reasoning with Reward Models: An Analytical Survey",
+    "date": "2025-10-02",
+    "source": "arxiv"
+  },
+  {
+    "n": 16,
+    "id": "openai-o1-learning-to-reason",
+    "url": "https://openai.com/index/learning-to-reason-with-llms/",
+    "title": "Learning to reason with LLMs",
+    "date": "2024-09-12",
+    "source": "web"
+  },
+  {
+    "n": 17,
+    "id": "2501.19393",
+    "url": "https://huggingface.co/papers/2501.19393",
+    "title": "s1: Simple test-time scaling",
+    "date": "2025-01-31",
+    "source": "hf-search"
+  },
+  {
+    "n": 18,
+    "id": "openai-o3-o4-mini",
+    "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+    "title": "Introducing OpenAI o3 and o4-mini",
+    "date": "2025-04-16",
+    "source": "web"
+  },
+  {
+    "n": 19,
+    "id": "2504.13837",
+    "url": "https://huggingface.co/papers/2504.13837",
+    "title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+    "date": "2025-04-18",
+    "source": "hf-search"
+  },
+  {
+    "n": 20,
+    "id": "2507.14843",
+    "url": "https://huggingface.co/papers/2507.14843",
+    "title": "The Invisible Leash: Why RLVR May Not Escape Its Origin",
+    "date": "2025-07-20",
+    "source": "hf-search"
+  },
+  {
+    "n": 21,
+    "id": "2505.24864",
+    "url": "https://arxiv.org/abs/2505.24864",
+    "title": "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models",
+    "date": "2025-05-30",
+    "source": "arxiv"
+  },
+  {
+    "n": 22,
+    "id": "2509.25300",
+    "url": "https://huggingface.co/papers/2509.25300",
+    "title": "Scaling Behaviors of LLM Reinforcement Learning Post-Training: An Empirical Study in Mathematical Reasoning",
+    "date": "2025-09-29",
+    "source": "hf-daily"
+  },
+  {
+    "n": 23,
+    "id": "2510.02230",
+    "url": "https://huggingface.co/papers/2510.02230",
+    "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
+    "date": "2025-10-02",
+    "source": "hf-daily"
+  },
+  {
+    "n": 24,
+    "id": "2508.08221",
+    "url": "https://huggingface.co/papers/2508.08221",
+    "title": "Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning",
+    "date": "2025-08-11",
+    "source": "hf-daily"
+  },
+  {
+    "n": 25,
+    "id": "1706.03741",
+    "url": "https://arxiv.org/abs/1706.03741",
+    "title": "Deep reinforcement learning from human preferences",
+    "date": "2017-06-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 26,
+    "id": "2203.02155",
+    "url": "https://arxiv.org/abs/2203.02155",
+    "title": "Training language models to follow instructions with human feedback",
+    "date": "2022-03-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 27,
+    "id": "2501.12948",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "date": "2025-01-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 28,
+    "id": "deepseek-r1-github",
+    "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "title": "deepseek-ai/DeepSeek-R1 (repository README)",
+    "date": "2025-01-20",
+    "source": "web"
+  },
+  {
+    "n": 29,
+    "id": "2304.06767",
+    "url": "https://arxiv.org/abs/2304.06767",
+    "title": "RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment",
+    "date": "2023-04-13",
+    "source": "arxiv"
+  },
+  {
+    "n": 30,
+    "id": "2504.05118",
+    "url": "https://huggingface.co/papers/2504.05118",
+    "title": "VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks",
+    "date": "2025-04-11",
+    "source": "hf-search"
+  },
+  {
+    "n": 31,
+    "id": "2409.19256",
+    "url": "https://huggingface.co/papers/2409.19256",
+    "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
+    "date": "2024-09-28",
+    "source": "hf-search"
+  },
+  {
+    "n": 32,
+    "id": "2312.08935",
+    "url": "https://huggingface.co/papers/2312.08935",
+    "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations",
+    "date": "2023-12-14",
+    "source": "hf-search"
+  },
+  {
+    "n": 33,
+    "id": "2406.06592",
+    "url": "https://huggingface.co/papers/2406.06592",
+    "title": "Improve Mathematical Reasoning in Language Models by Automated Process Supervision",
+    "date": "2024-06-05",
+    "source": "hf-search"
+  },
+  {
+    "n": 34,
+    "id": "2412.01981",
+    "url": "https://huggingface.co/papers/2412.01981",
+    "title": "Free Process Rewards without Process Labels",
+    "date": "2024-12-02",
+    "source": "hf-search"
+  },
+  {
+    "n": 35,
+    "id": "2408.15240",
+    "url": "https://huggingface.co/papers/2408.15240",
+    "title": "Generative Verifiers: Reward Modeling as Next-Token Prediction",
+    "date": "2024-08-27",
+    "source": "hf-search"
+  },
+  {
+    "n": 36,
+    "id": "2501.07301",
+    "url": "https://huggingface.co/papers/2501.07301",
+    "title": "The Lessons of Developing Process Reward Models in Mathematical Reasoning",
+    "date": "2025-01-13",
+    "source": "hf-search"
+  },
+  {
+    "n": 37,
+    "id": "epoch-rl-envs",
+    "url": "https://epoch.ai/gradient-updates/state-of-rl-envs",
+    "title": "An FAQ on reinforcement learning environments",
+    "date": "2025-09-15",
+    "source": "web"
+  },
+  {
+    "n": 38,
+    "id": "anthropic-claude-3-7-sonnet",
+    "url": "https://www.anthropic.com/research/claude-3-7-sonnet",
+    "title": "Claude 3.7 Sonnet and Claude Code",
+    "date": "2025-02-24",
+    "source": "web"
+  },
+  {
+    "n": 39,
+    "id": "2501.12599",
+    "url": "https://arxiv.org/abs/2501.12599",
+    "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+    "date": "2025-01-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 40,
+    "id": "2505.09388",
+    "url": "https://arxiv.org/abs/2505.09388",
+    "title": "Qwen3 Technical Report",
+    "date": "2025-05-14",
+    "source": "arxiv"
+  },
+  {
+    "n": 41,
+    "id": "2412.16720",
+    "url": "https://arxiv.org/abs/2412.16720",
+    "title": "OpenAI o1 System Card",
+    "date": "2024-12-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 42,
+    "id": "epoch-ai-capabilities",
+    "url": "https://epoch.ai/data-insights/ai-capabilities-over-past-year",
+    "title": "AI capabilities have steadily improved over the past year (Epoch AI Benchmarking Hub)",
+    "date": "2025-09-30",
+    "source": "web"
+  },
+  {
+    "n": 43,
+    "id": "2510.27044",
+    "url": "https://huggingface.co/papers/2510.27044",
+    "title": "Limits of Generalization in RLVR: Two Case Studies in Mathematical Reasoning",
+    "date": "2025-10-30",
+    "source": "hf-search"
+  },
+  {
+    "n": 44,
+    "id": "2507.12885",
+    "url": "https://huggingface.co/papers/2507.12885",
+    "title": "VAR-MATH: Probing True Mathematical Reasoning in LLMs via Symbolic Multi-Instance Benchmarks",
+    "date": "2025-07-10",
+    "source": "hf-daily"
+  },
+  {
+    "n": 45,
+    "id": "2311.04850",
+    "url": "https://huggingface.co/papers/2311.04850",
+    "title": "Rethinking Benchmark and Contamination for Language Models with Rephrased Samples",
+    "date": "2023-11-08",
+    "source": "hf-search"
+  },
+  {
+    "n": 46,
+    "id": "2411.03923",
+    "url": "https://huggingface.co/papers/2411.03923",
+    "title": "Evaluation data contamination in LLMs: how do we measure it and (when) does it matter?",
+    "date": "2024-11-06",
+    "source": "hf-search"
+  },
+  {
+    "n": 47,
+    "id": "2505.08389",
+    "url": "https://huggingface.co/papers/2505.08389",
+    "title": "Towards Contamination Resistant Benchmarks",
+    "date": "2025-05-13",
+    "source": "hf-daily"
+  },
+  {
+    "n": 48,
+    "id": "anthropic-cot-faithfulness",
+    "url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+    "title": "Reasoning models don't always say what they think",
+    "date": "2025-04-03",
+    "source": "web"
+  },
+  {
+    "n": 49,
+    "id": "epoch-promise-reasoning-models",
+    "url": "https://epoch.ai/gradient-updates/the-promise-of-reasoning-models",
+    "title": "The promise of reasoning models",
+    "date": "2025-02-28",
+    "source": "web"
+  },
+  {
+    "n": 50,
+    "id": "2511.06307",
+    "url": "https://huggingface.co/papers/2511.06307",
+    "title": "DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation",
+    "date": "2025-11-09",
+    "source": "hf-search"
+  }
+]

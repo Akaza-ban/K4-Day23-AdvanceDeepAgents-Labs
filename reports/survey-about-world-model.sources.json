@@ -1,0 +1,426 @@
+[
+  {
+    "n": 1,
+    "id": "1803.10122",
+    "url": "https://arxiv.org/abs/1803.10122",
+    "title": "World Models (Ha & Schmidhuber)",
+    "date": "2018-03-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2411.14499",
+    "url": "https://arxiv.org/abs/2411.14499",
+    "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
+    "date": "2024-11-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "1811.04551",
+    "url": "https://arxiv.org/abs/1811.04551",
+    "title": "Learning Latent Dynamics for Planning from Pixels (PlaNet)",
+    "date": "2018-11-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2301.04104",
+    "url": "https://arxiv.org/abs/2301.04104",
+    "title": "Mastering Diverse Domains through World Models (DreamerV3)",
+    "date": "2023-01-10",
+    "source": "arxiv"
+  },
+  {
+    "n": 5,
+    "id": "2509.24527",
+    "url": "https://arxiv.org/abs/2509.24527",
+    "title": "Training Agents Inside of Scalable World Models (Dreamer 4)",
+    "date": "2025-09-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "2310.16828",
+    "url": "https://arxiv.org/abs/2310.16828",
+    "title": "TD-MPC2: Scalable, Robust World Models for Continuous Control",
+    "date": "2023-10-25",
+    "source": "arxiv"
+  },
+  {
+    "n": 7,
+    "id": "2402.15391",
+    "url": "https://arxiv.org/abs/2402.15391",
+    "title": "Genie: Generative Interactive Environments",
+    "date": "2024-02-23",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2405.15223",
+    "url": "https://arxiv.org/abs/2405.15223",
+    "title": "iVideoGPT: Interactive VideoGPTs are Scalable World Models",
+    "date": "2024-05-23",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2406.09455",
+    "url": "https://arxiv.org/abs/2406.09455",
+    "title": "Pandora: Towards General World Model with Natural Language Actions and Video States",
+    "date": "2024-06-13",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "2405.12399",
+    "url": "https://arxiv.org/abs/2405.12399",
+    "title": "Diffusion for World Modeling: Visual Details Matter in Atari (DIAMOND)",
+    "date": "2024-05-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 11,
+    "id": "2408.14837",
+    "url": "https://arxiv.org/abs/2408.14837",
+    "title": "Diffusion Models Are Real-Time Game Engines (GameNGen)",
+    "date": "2024-08-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 12,
+    "id": "2503.20523",
+    "url": "https://arxiv.org/abs/2503.20523",
+    "title": "GAIA-2: A Controllable Multi-View Generative World Model for Autonomous Driving",
+    "date": "2025-03-26",
+    "source": "arxiv"
+  },
+  {
+    "n": 13,
+    "id": "worldlabs-marble",
+    "url": "https://www.worldlabs.ai/blog/marble-world-model",
+    "title": "Marble: A Multimodal World Model",
+    "date": "2025-11-12",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "2412.03526",
+    "url": "https://arxiv.org/abs/2412.03526",
+    "title": "Feed-Forward Bullet-Time Reconstruction of Dynamic Scenes from Monocular Videos (BTimer)",
+    "date": "2024-12-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 15,
+    "id": "2301.08243",
+    "url": "https://arxiv.org/abs/2301.08243",
+    "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (I-JEPA)",
+    "date": "2023-01-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 16,
+    "id": "2404.08471",
+    "url": "https://arxiv.org/abs/2404.08471",
+    "title": "Revisiting Feature Prediction for Learning Visual Representations from Video (V-JEPA)",
+    "date": "2024-04-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 17,
+    "id": "2506.09985",
+    "url": "https://arxiv.org/abs/2506.09985",
+    "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+    "date": "2025-06-11",
+    "source": "arxiv"
+  },
+  {
+    "n": 18,
+    "id": "2411.04983",
+    "url": "https://arxiv.org/abs/2411.04983",
+    "title": "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning",
+    "date": "2024-11-07",
+    "source": "arxiv"
+  },
+  {
+    "n": 19,
+    "id": "2501.09038",
+    "url": "https://arxiv.org/abs/2501.09038",
+    "title": "Do generative video models understand physical principles? (Physics-IQ)",
+    "date": "2025-01-14",
+    "source": "arxiv"
+  },
+  {
+    "n": 20,
+    "id": "physics-iq-site",
+    "url": "https://physics-iq.github.io/",
+    "title": "Physics-IQ Benchmark project page and leaderboard",
+    "date": "2025-02-19",
+    "source": "web"
+  },
+  {
+    "n": 21,
+    "id": "2502.20694",
+    "url": "https://arxiv.org/abs/2502.20694",
+    "title": "WorldModelBench: Judging Video Generation Models As World Models",
+    "date": "2025-02-28",
+    "source": "arxiv"
+  },
+  {
+    "n": 22,
+    "id": "worldmodelbench-site",
+    "url": "https://worldmodelbench-team.github.io/",
+    "title": "WorldModelBench project page",
+    "date": "2025-02-27",
+    "source": "web"
+  },
+  {
+    "n": 23,
+    "id": "genie-3-deepmind",
+    "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+    "title": "Genie 3: A new frontier for world models",
+    "date": "2025-08-05",
+    "source": "web"
+  },
+  {
+    "n": 24,
+    "id": "oasis-model",
+    "url": "https://oasis-model.github.io/",
+    "title": "Oasis (Decart x Etched): the first experiential, realtime, open-world AI model",
+    "date": "2024-10-31",
+    "source": "web"
+  },
+  {
+    "n": 25,
+    "id": "worldlabs-rtfm",
+    "url": "https://www.worldlabs.ai/blog/rtfm",
+    "title": "RTFM: A Real-Time Frame Model",
+    "date": "2025-10-16",
+    "source": "web"
+  },
+  {
+    "n": 26,
+    "id": "1911.08265",
+    "url": "https://arxiv.org/abs/1911.08265",
+    "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model (MuZero)",
+    "date": "2019-11-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 27,
+    "id": "2111.00210",
+    "url": "https://arxiv.org/abs/2111.00210",
+    "title": "Mastering Atari Games with Limited Data (EfficientZero)",
+    "date": "2021-10-30",
+    "source": "arxiv"
+  },
+  {
+    "n": 28,
+    "id": "vjepa-meta-blog",
+    "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+    "title": "V-JEPA: The next step toward advanced machine intelligence",
+    "date": "2024-02-15",
+    "source": "web"
+  },
+  {
+    "n": 29,
+    "id": "vjepa2-meta-blog",
+    "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+    "title": "Introducing the V-JEPA 2 world model and new benchmarks for physical reasoning",
+    "date": "2025-06-11",
+    "source": "web"
+  },
+  {
+    "n": 30,
+    "id": "2301.08243-hf",
+    "url": "https://huggingface.co/papers/2301.08243",
+    "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (I-JEPA)",
+    "date": "2023-01-19",
+    "source": "hf-search"
+  },
+  {
+    "n": 31,
+    "id": "2405.12399-hf",
+    "url": "https://huggingface.co/papers/2405.12399",
+    "title": "Diffusion for World Modeling: Visual Details Matter in Atari (DIAMOND)",
+    "date": "2024-05-20",
+    "source": "hf-search"
+  },
+  {
+    "n": 32,
+    "id": "2510.16732",
+    "url": "https://huggingface.co/papers/2510.16732",
+    "title": "A Comprehensive Survey on World Models for Embodied AI",
+    "date": "2025-10-19",
+    "source": "hf-search"
+  },
+  {
+    "n": 33,
+    "id": "2501.11260",
+    "url": "https://arxiv.org/abs/2501.11260",
+    "title": "A Survey of World Models for Autonomous Driving",
+    "date": "2025-01-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 34,
+    "id": "2405.03520-hf",
+    "url": "https://huggingface.co/papers/2405.03520",
+    "title": "Is Sora a World Simulator? A Comprehensive Survey on General World Models and Beyond",
+    "date": "2024-05-06",
+    "source": "hf-search"
+  },
+  {
+    "n": 35,
+    "id": "worldlabs-taxonomy",
+    "url": "https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models",
+    "title": "A Functional Taxonomy of World Models (Renderers, Simulators, Planners)",
+    "date": "2025-11-20",
+    "source": "web"
+  },
+  {
+    "n": 36,
+    "id": "nvidia-cosmos",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
+    "title": "NVIDIA Launches Cosmos World Foundation Model Platform to Accelerate Physical AI Development",
+    "date": "2025-01-06",
+    "source": "web"
+  },
+  {
+    "n": 37,
+    "id": "2503.04416",
+    "url": "https://arxiv.org/abs/2503.04416",
+    "title": "Learning Transformer-based World Models with Contrastive Predictive Coding (TWISTER)",
+    "date": "2025-03-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 38,
+    "id": "gaia2-wayve-blog",
+    "url": "https://wayve.ai/thinking/gaia-2/",
+    "title": "GAIA-2: Pushing the Boundaries of Video Generative Models",
+    "date": "2025-03-26",
+    "source": "web"
+  },
+  {
+    "n": 39,
+    "id": "2309.17080",
+    "url": "https://arxiv.org/abs/2309.17080",
+    "title": "GAIA-1: A Generative World Model for Autonomous Driving",
+    "date": "2023-09-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 40,
+    "id": "2405.17398",
+    "url": "https://arxiv.org/abs/2405.17398",
+    "title": "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
+    "date": "2024-05-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 41,
+    "id": "2306.03310",
+    "url": "https://arxiv.org/abs/2306.03310",
+    "title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+    "date": "2023-06-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 42,
+    "id": "2406.15349",
+    "url": "https://arxiv.org/abs/2406.15349",
+    "title": "NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking",
+    "date": "2024-06-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 43,
+    "id": "2504.00983",
+    "url": "https://arxiv.org/abs/2504.00983",
+    "title": "WorldScore: A Unified Evaluation Benchmark for World Generation",
+    "date": "2025-04-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 44,
+    "id": "worldscore-repo",
+    "url": "https://github.com/haoyi-duan/WorldScore",
+    "title": "WorldScore repository and leaderboard",
+    "date": "2025-04-01",
+    "source": "web"
+  },
+  {
+    "n": 45,
+    "id": "2311.17982",
+    "url": "https://arxiv.org/abs/2311.17982",
+    "title": "VBench: Comprehensive Benchmark Suite for Video Generative Models",
+    "date": "2023-11-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 46,
+    "id": "vbench-site",
+    "url": "https://vchitect.github.io/VBench-project/",
+    "title": "VBench project page",
+    "date": "2024-04-01",
+    "source": "web"
+  },
+  {
+    "n": 47,
+    "id": "2504.02918",
+    "url": "https://arxiv.org/abs/2504.02918",
+    "title": "Morpheus: Benchmarking Physical Reasoning of Video Generative Models with Real Physical Experiments",
+    "date": "2025-04-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 48,
+    "id": "icml2025-video-world-model",
+    "url": "https://proceedings.mlr.press/v267/kang25g.html",
+    "title": "How Far Is Video Generation from World Model: A Physical Law Perspective",
+    "date": "2025-07-01",
+    "source": "web"
+  },
+  {
+    "n": 49,
+    "id": "2501.03575",
+    "url": "https://arxiv.org/abs/2501.03575",
+    "title": "Cosmos World Foundation Model Platform for Physical AI",
+    "date": "2025-01-07",
+    "source": "arxiv"
+  },
+  {
+    "n": 50,
+    "id": "marcus-sora-physics",
+    "url": "https://garymarcus.substack.com/p/no-sora-has-not-learned-physics",
+    "title": "No, Sora has not learned physics (Gary Marcus)",
+    "date": "2024-03-02",
+    "source": "web"
+  },
+  {
+    "n": 51,
+    "id": "sora-world-simulators",
+    "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+    "title": "Video generation models as world simulators (Sora technical report)",
+    "date": "2024-02-15",
+    "source": "web"
+  },
+  {
+    "n": 52,
+    "id": "2405.03520",
+    "url": "https://arxiv.org/abs/2405.03520",
+    "title": "Is Sora a World Simulator? A Comprehensive Survey on General World Models and Beyond",
+    "date": "2024-05-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 53,
+    "id": "2507.05169",
+    "url": "https://arxiv.org/abs/2507.05169",
+    "title": "Critique of World Model",
+    "date": "2025-07-07",
+    "source": "arxiv"
+  }
+]

@@ -5,34 +5,137 @@ research.py uploads this file to the sandbox and the lead agent runs it with the
 It must exit 0 and print "OK: ..." when the report is consistent, else print each problem and exit 1.
 """
 import json
+import re
 import sys
 
 REPORT = "/tmp/work/report/report.md"
 SOURCES = "/tmp/work/research/sources.json"
 
+_GROUP = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\](?!\()")   # [3]  [1, 2]  [1-3]  [2-3]; not [3](link)
+_CODE = re.compile(r"(```.*?```|`[^`\n]*`)", re.DOTALL)
+_REF_HEADING = re.compile(r"(?m)^##[ \t]+References[ \t]*$")
+_REF_LINE = re.compile(r"^\s*\[(\d+)\]\s*(.*)$")
+_URL_RE = re.compile(r"https?://\S+")
+
+
+def _group_numbers(group):
+    numbers = []
+    for part in re.split(r"\s*,\s*", group):
+        span = re.fullmatch(r"(\d+)\s*[–-]\s*(\d+)", part)
+        if span:
+            a, b = int(span.group(1)), int(span.group(2))
+            numbers.extend(range(a, b + 1) if 0 <= b - a <= 200 else [a, b])
+        else:
+            numbers.append(int(part))
+    return numbers
+
 
 def check(report_text, sources):
     """Return a list of problem strings (empty list = OK).
 
-    PSEUDO-CODE:
-      problems = []
-      if sources is empty: return ["no sources in sources.json"]
-      for each source entry:
-          n must be an int                       -> problem if not
-          url must start with http:// or https://-> problem if not
-          the same url must not appear twice     -> problem if duplicated
-      split report_text at the heading "## References":
-          body = text before it; if the heading is missing -> problem
-      cited = set of numbers found as [n] in the BODY only (not in the reference list; use a regex)
-      every number in `cited` must exist in sources -> problem "[n] cited but missing from sources.json"
-      every source number must be in `cited`        -> problem "source [n] never cited"
-      the lines of the References section that start with "[n]" (regex) are the reference lines:
-          every source needs exactly ONE reference line (none missing, no number twice, no number that is not a source)
-          each reference line holds exactly ONE http(s) URL and it must equal that source's url
-          (a line bundling several sources under one number is a problem)
-      return problems
+    Validates:
+      1. sources is a non-empty list of dicts.
+      2. Each source has int `n`, valid http/https `url`, and unique `url`.
+      3. report_text has a "## References" heading dividing body and references.
+      4. Citations in body (excluding code blocks and markdown links) match sources:
+         - Every cited number exists in sources.
+         - Every source is cited at least once in the body.
+      5. References section has exactly one line starting with [n] per source:
+         - No missing sources, no extra references, no duplicates.
+         - Exactly one URL per reference line matching that source's URL.
     """
-    raise NotImplementedError("TODO: implement check()")
+    problems = []
+
+    # 1. Sources validation
+    if not isinstance(sources, list) or not sources:
+        return ["no sources in sources.json"]
+
+    seen_urls = {}
+    source_by_n = {}
+    for entry in sources:
+        if not isinstance(entry, dict):
+            problems.append(f"source entry {entry!r} is not an object")
+            continue
+
+        n = entry.get("n")
+        if not isinstance(n, int):
+            problems.append(f"source n={n!r} must be an int")
+        elif n in source_by_n:
+            problems.append(f"duplicate source number [{n}] in sources.json")
+        else:
+            source_by_n[n] = entry
+
+        url = entry.get("url")
+        if not isinstance(url, str) or not (url.startswith("http://") or url.startswith("https://")):
+            problems.append(f"source n={n!r} url must start with http:// or https://: {url!r}")
+        else:
+            if url in seen_urls:
+                problems.append(f"duplicate url in sources.json: {url} (used by [{seen_urls[url]}] and [{n}])")
+            else:
+                seen_urls[url] = n
+
+    # 2. Split report at "## References"
+    ref_matches = list(_REF_HEADING.finditer(report_text))
+    if not ref_matches:
+        problems.append("missing '## References' section")
+        return problems
+
+    ref_match = ref_matches[-1]
+    body = report_text[:ref_match.start()]
+    ref_section = report_text[ref_match.end():]
+
+    # 3. Find cited numbers in body only (ignoring code spans)
+    cited = set()
+    segments = _CODE.split(body)
+    for i, seg in enumerate(segments):
+        if i % 2 == 1:
+            continue
+        for match in _GROUP.finditer(seg):
+            for num in _group_numbers(match.group(1)):
+                cited.add(num)
+
+    for num in sorted(cited):
+        if num not in source_by_n:
+            problems.append(f"[{num}] cited in body but missing from sources.json")
+
+    for num in sorted(source_by_n.keys()):
+        if num not in cited:
+            problems.append(f"source [{num}] never cited in body")
+
+    # 4. Validate references lines
+    ref_lines_by_n = {}
+    for line in ref_section.splitlines():
+        line_clean = line.strip()
+        m = _REF_LINE.match(line_clean)
+        if m:
+            num = int(m.group(1))
+            ref_lines_by_n.setdefault(num, []).append(line_clean)
+
+    for num, lines in sorted(ref_lines_by_n.items()):
+        if len(lines) > 1:
+            problems.append(f"duplicate reference line for [{num}] (found {len(lines)} lines)")
+        if num not in source_by_n:
+            problems.append(f"reference line [{num}] is not in sources.json")
+
+    for num in sorted(source_by_n.keys()):
+        if num not in ref_lines_by_n:
+            problems.append(f"missing reference line for source [{num}]")
+        else:
+            line_text = ref_lines_by_n[num][0]
+            raw_urls = _URL_RE.findall(line_text)
+            cleaned_urls = [u.rstrip(".,;:)>]") for u in raw_urls]
+            if len(raw_urls) == 0:
+                problems.append(f"reference line [{num}] has no URL")
+            elif len(raw_urls) > 1:
+                problems.append(f"reference line [{num}] has multiple URLs (cannot bundle sources under one number)")
+            else:
+                expected_url = source_by_n[num].get("url")
+                if raw_urls[0] != expected_url and cleaned_urls[0] != expected_url:
+                    problems.append(
+                        f"reference line [{num}] URL {raw_urls[0]!r} does not match source URL {expected_url!r}"
+                    )
+
+    return problems
 
 
 def main(argv):

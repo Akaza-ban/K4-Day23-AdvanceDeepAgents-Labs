@@ -1,0 +1,536 @@
+[
+  {
+    "n": 1,
+    "url": "https://hassan11196.github.io/llm-systems-cookbook/notebooks/05_serving/01_roofline_analysis.html",
+    "title": "Roofline analysis for LLM serving - The LLM Systems Cookbook",
+    "date": "2025-01-01",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "2402.16363",
+    "url": "https://arxiv.org/abs/2402.16363",
+    "title": "LLM Inference Unveiled: Survey and Roofline Model Insights",
+    "date": "2024-02-26",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "2309.06180",
+    "url": "https://arxiv.org/abs/2309.06180",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM)",
+    "date": "2023-09-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "url": "https://blog.vllm.ai/2023/06/20/vllm.html",
+    "title": "vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention",
+    "date": "2023-06-20",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "2405.04434",
+    "url": "https://arxiv.org/abs/2405.04434",
+    "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+    "date": "2024-06-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "2503.01840",
+    "url": "https://arxiv.org/abs/2503.01840",
+    "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
+    "date": "2025-03-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 7,
+    "id": "2306.00978",
+    "url": "https://arxiv.org/abs/2306.00978",
+    "title": "AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration",
+    "date": "2023-06-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2408.00118",
+    "url": "https://arxiv.org/abs/2408.00118",
+    "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+    "date": "2024-08-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2306.11644",
+    "url": "https://arxiv.org/abs/2306.11644",
+    "title": "Textbooks Are All You Need (phi-1)",
+    "date": "2023-06-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "2502.02737",
+    "url": "https://arxiv.org/abs/2502.02737",
+    "title": "SmolLM2: When Smol Goes Big - Data-Centric Training of a Small Language Model",
+    "date": "2025-02-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 11,
+    "id": "2404.14219",
+    "url": "https://arxiv.org/abs/2404.14219",
+    "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+    "date": "2024-04-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 12,
+    "id": "2404.06395",
+    "url": "https://arxiv.org/abs/2404.06395",
+    "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+    "date": "2024-06-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 13,
+    "url": "https://introl.com/blog/ai-inference-vs-training-infrastructure-economics-diverging-2025",
+    "title": "AI Inference vs Training Infrastructure: Economics Diverging",
+    "date": "2026-04-28",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "2502.12143",
+    "url": "https://arxiv.org/abs/2502.12143",
+    "title": "Small Models Struggle to Learn from Strong Reasoners",
+    "date": "2025-02-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 15,
+    "id": "2411.17691",
+    "url": "https://arxiv.org/abs/2411.17691",
+    "title": "Low-Bit Quantization Favors Undertrained LLMs: Scaling Laws for Quantized LLMs with 100T Training Tokens",
+    "date": "2024-11-26",
+    "source": "arxiv"
+  },
+  {
+    "n": 16,
+    "id": "2404.06654",
+    "url": "https://arxiv.org/abs/2404.06654",
+    "title": "RULER: What's the Real Context Size of Your Long-Context Language Models?",
+    "date": "2024-04-09",
+    "source": "arxiv"
+  },
+  {
+    "n": 17,
+    "id": "2401.09670",
+    "url": "https://huggingface.co/papers/2401.09670",
+    "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+    "date": "2024-01-18",
+    "source": "hf-search"
+  },
+  {
+    "n": 18,
+    "id": "2203.15556",
+    "url": "https://arxiv.org/abs/2203.15556",
+    "title": "Training Compute-Optimal Large Language Models (Chinchilla)",
+    "date": "2022-03-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 19,
+    "id": "2309.05463",
+    "url": "https://arxiv.org/abs/2309.05463",
+    "title": "Textbooks Are All You Need II: phi-1.5 Technical Report",
+    "date": "2023-09-11",
+    "source": "arxiv"
+  },
+  {
+    "n": 20,
+    "id": "2401.02385",
+    "url": "https://arxiv.org/abs/2401.02385",
+    "title": "TinyLlama: An Open-Source Small Language Model",
+    "date": "2024-01-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 21,
+    "id": "2410.20011",
+    "url": "https://huggingface.co/papers/2410.20011",
+    "title": "A Survey of Small Language Models",
+    "date": "2024-10-25",
+    "source": "hf-search"
+  },
+  {
+    "n": 22,
+    "url": "https://huggingface.co/papers/2409.15790",
+    "title": "Small Language Models: Survey, Measurements, and Insights",
+    "date": "2024-09-24",
+    "source": "hf-search"
+  },
+  {
+    "n": 23,
+    "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+    "title": "Llama 3.2: Revolutionizing edge AI and vision with open models",
+    "date": "2024-09-25",
+    "source": "web"
+  },
+  {
+    "n": 24,
+    "id": "2507.13575",
+    "url": "https://arxiv.org/abs/2507.13575",
+    "title": "Apple Intelligence Foundation Language Models",
+    "date": "2025-07-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 25,
+    "id": "2312.11805",
+    "url": "https://arxiv.org/abs/2312.11805",
+    "title": "Gemini: A Family of Highly Capable Multimodal Models",
+    "date": "2023-12-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 26,
+    "url": "https://developer.android.com/ai/gemini-nano",
+    "title": "Gemini Nano | Android Developers",
+    "date": "2025-08-22",
+    "source": "web"
+  },
+  {
+    "n": 27,
+    "url": "https://ai.meta.com/blog/meta-llama-quantized-lightweight-models/",
+    "title": "Introducing quantized Llama models with increased speed and a reduced memory footprint",
+    "date": "2024-10-24",
+    "source": "web"
+  },
+  {
+    "n": 28,
+    "id": "2402.02750",
+    "url": "https://arxiv.org/abs/2402.02750",
+    "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+    "date": "2024-02-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 29,
+    "id": "2309.17453",
+    "url": "https://arxiv.org/abs/2309.17453",
+    "title": "Efficient Streaming Language Models with Attention Sinks (StreamingLLM)",
+    "date": "2023-09-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 30,
+    "id": "2306.14048",
+    "url": "https://arxiv.org/abs/2306.14048",
+    "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+    "date": "2023-12-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 31,
+    "id": "2404.14469",
+    "url": "https://arxiv.org/abs/2404.14469",
+    "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+    "date": "2024-04-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 32,
+    "id": "2401.10774",
+    "url": "https://arxiv.org/abs/2401.10774",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "date": "2024-01-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 33,
+    "id": "2404.16710",
+    "url": "https://arxiv.org/abs/2404.16710",
+    "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding",
+    "date": "2024-04-25",
+    "source": "arxiv"
+  },
+  {
+    "n": 34,
+    "url": "https://huggingface.co/papers/2502.10424",
+    "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+    "date": "2025-02-05",
+    "source": "hf-search"
+  },
+  {
+    "n": 35,
+    "url": "https://huggingface.co/papers/2502.17421",
+    "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification",
+    "date": "2025-02-24",
+    "source": "hf-search"
+  },
+  {
+    "n": 36,
+    "id": "2307.08691",
+    "url": "https://arxiv.org/abs/2307.08691",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "date": "2023-07-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 37,
+    "id": "2312.00752",
+    "url": "https://arxiv.org/abs/2312.00752",
+    "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "date": "2024-05-31",
+    "source": "arxiv"
+  },
+  {
+    "n": 38,
+    "id": "2403.19887",
+    "url": "https://arxiv.org/abs/2403.19887",
+    "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+    "date": "2024-03-28",
+    "source": "arxiv"
+  },
+  {
+    "n": 39,
+    "id": "2211.10438",
+    "url": "https://arxiv.org/abs/2211.10438",
+    "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "date": "2022-11-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 40,
+    "id": "2306.08543",
+    "url": "https://arxiv.org/abs/2306.08543",
+    "title": "MiniLLM: Knowledge Distillation of Large Language Models",
+    "date": "2023-06-14",
+    "source": "arxiv"
+  },
+  {
+    "n": 41,
+    "id": "2310.06694",
+    "url": "https://arxiv.org/abs/2310.06694",
+    "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+    "date": "2023-10-16",
+    "source": "arxiv"
+  },
+  {
+    "n": 42,
+    "id": "2203.05482",
+    "url": "https://arxiv.org/abs/2203.05482",
+    "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+    "date": "2022-07-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 43,
+    "url": "https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/",
+    "title": "Phi-2: The surprising power of small language models",
+    "date": "2023-12-12",
+    "source": "web"
+  },
+  {
+    "n": 44,
+    "id": "2412.15115",
+    "url": "https://arxiv.org/abs/2412.15115",
+    "title": "Qwen2.5 Technical Report",
+    "date": "2024-12-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 45,
+    "url": "https://qwenlm.github.io/blog/qwen2.5-llm/",
+    "title": "Qwen2.5-LLM: Extending the boundary of LLMs",
+    "date": "2024-09-19",
+    "source": "web"
+  },
+  {
+    "n": 46,
+    "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md",
+    "title": "Llama 3.2 Model Card (1B/3B)",
+    "date": "2024-09-25",
+    "source": "web"
+  },
+  {
+    "n": 47,
+    "id": "2402.14905",
+    "url": "https://arxiv.org/abs/2402.14905",
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "date": "2024-06-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 48,
+    "id": "2404.14619",
+    "url": "https://arxiv.org/abs/2404.14619",
+    "title": "OpenELM: An Efficient Language Model Family with Open Training and Inference Framework",
+    "date": "2024-04-24",
+    "source": "arxiv"
+  },
+  {
+    "n": 49,
+    "id": "2402.17834",
+    "url": "https://arxiv.org/abs/2402.17834",
+    "title": "Stable LM 2 1.6B Technical Report",
+    "date": "2024-02-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 50,
+    "url": "https://huggingface.co/papers/2502.19883",
+    "title": "Behind the Tip of Efficiency: Uncovering the Submerged Threats of Jailbreak Attacks in Small Language Models",
+    "date": "2025-02-27",
+    "source": "hf-search"
+  },
+  {
+    "n": 51,
+    "url": "https://www.lmsys.org/blog/2024-01-17-sglang/",
+    "title": "Fast and Expressive LLM Inference with RadixAttention and SGLang",
+    "date": "2024-01-17",
+    "source": "web"
+  },
+  {
+    "n": 52,
+    "id": "2312.07104",
+    "url": "https://arxiv.org/abs/2312.07104",
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "date": "2023-12-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 53,
+    "url": "https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/",
+    "title": "NVIDIA TensorRT-LLM Supercharges Large Language Model Inference on NVIDIA H100 GPUs",
+    "date": "2023-09-09",
+    "source": "web"
+  },
+  {
+    "n": 54,
+    "url": "https://nvidia.github.io/TensorRT-LLM/blogs/H100vsA100.html",
+    "title": "H100 has 4.6x A100 Performance in TensorRT LLM, achieving 10,000 tok/s at 100ms to first token",
+    "date": "2023-10-01",
+    "source": "web"
+  },
+  {
+    "n": 55,
+    "url": "https://developer.nvidia.com/blog/achieving-high-mixtral-8x7b-performance-with-nvidia-h100-tensor-core-gpus-and-tensorrt-llm/",
+    "title": "Achieving High Mixtral 8x7B Performance with NVIDIA H100 Tensor Core GPUs and TensorRT-LLM",
+    "date": "2024-07-02",
+    "source": "web"
+  },
+  {
+    "n": 56,
+    "id": "2303.06865",
+    "url": "https://arxiv.org/abs/2303.06865",
+    "title": "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+    "date": "2023-03-13",
+    "source": "arxiv"
+  },
+  {
+    "n": 57,
+    "id": "2312.12456",
+    "url": "https://arxiv.org/abs/2312.12456",
+    "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+    "date": "2023-12-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 58,
+    "url": "https://blog.mlc.ai/2024/06/07/universal-LLM-deployment-engine-with-ML-compilation.html",
+    "title": "MLC-LLM: Universal LLM Deployment Engine with ML Compilation",
+    "date": "2024-06-07",
+    "source": "web"
+  },
+  {
+    "n": 59,
+    "url": "https://mlcommons.org/benchmarks/client/",
+    "title": "MLPerf Client Benchmark",
+    "date": "2025-01-01",
+    "source": "web"
+  },
+  {
+    "n": 60,
+    "url": "https://mlcommons.org/benchmarks/inference-datacenter/",
+    "title": "Benchmark MLPerf Inference: Datacenter",
+    "date": "2025-01-01",
+    "source": "web"
+  },
+  {
+    "n": 61,
+    "url": "https://www.lmsys.org/blog/2023-05-03-arena/",
+    "title": "Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings",
+    "date": "2023-05-03",
+    "source": "web"
+  },
+  {
+    "n": 62,
+    "url": "https://www.lmsys.org/blog/2023-12-07-leaderboard/",
+    "title": "Chatbot Arena: New models & Elo system update",
+    "date": "2023-12-07",
+    "source": "web"
+  },
+  {
+    "n": 63,
+    "url": "https://machinelearning.apple.com/research/exploring-llms-mlx-m5",
+    "title": "Exploring LLMs with MLX and the Neural Accelerators in the M5 chip",
+    "date": "2025-11-19",
+    "source": "web"
+  },
+  {
+    "n": 64,
+    "id": "2510.18921",
+    "url": "https://arxiv.org/abs/2510.18921",
+    "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon",
+    "date": "2025-10-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 65,
+    "url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Unlocking-on-device-generative-AI-with-an-NPU-and-heterogeneous-computing.pdf",
+    "title": "Unlocking on-device generative AI with an NPU and heterogeneous computing",
+    "date": "2023-10-01",
+    "source": "web"
+  },
+  {
+    "n": 66,
+    "url": "https://developers.googleblog.com/unlocking-peak-performance-on-qualcomm-npu-with-litert/",
+    "title": "Unlocking Peak Performance on Qualcomm NPU with LiteRT",
+    "date": "2025-11-24",
+    "source": "web"
+  },
+  {
+    "n": 67,
+    "id": "2412.19437",
+    "url": "https://arxiv.org/abs/2412.19437",
+    "title": "DeepSeek-V3 Technical Report",
+    "date": "2024-12-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 68,
+    "url": "https://openrouter.ai/deepseek/deepseek-chat",
+    "title": "DeepSeek V3 - API Pricing & Benchmarks",
+    "date": "2025-01-01",
+    "source": "web"
+  },
+  {
+    "n": 69,
+    "id": "2410.14570",
+    "url": "https://arxiv.org/abs/2410.14570",
+    "title": "Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs",
+    "date": "2024-10-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 70,
+    "id": "2409.11055",
+    "url": "https://arxiv.org/abs/2409.11055",
+    "title": "Evaluating the Accuracy of Quantized LLMs across Tasks and Precisions",
+    "date": "2024-09-17",
+    "source": "arxiv"
+  }
+]

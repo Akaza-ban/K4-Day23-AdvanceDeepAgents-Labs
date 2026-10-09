@@ -1,0 +1,26 @@
+{
+  "topic": "survey about world model",
+  "model": "deepseek-chat",
+  "elapsed_s": 670.2,
+  "subagent_calls": 6,
+  "tool_calls": {
+    "write_todos": 6,
+    "ls": 5,
+    "read_file": 11,
+    "task": 6,
+    "write_file": 2,
+    "execute": 9,
+    "edit_file": 8,
+    "grep": 3
+  },
+  "tokens": {
+    "input": 1636624,
+    "output": 21522
+  },
+  "n_sources": 53,
+  "source_families": [
+    "arxiv",
+    "hf-search",
+    "web"
+  ]
+}

@@ -1,0 +1,642 @@
+[
+  {
+    "n": 1,
+    "id": "2006.11239",
+    "url": "https://arxiv.org/abs/2006.11239",
+    "title": "Denoising Diffusion Probabilistic Models",
+    "date": "2020-12-16",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2112.10752",
+    "url": "https://arxiv.org/abs/2112.10752",
+    "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+    "date": "2022-04-13",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "2207.12598",
+    "url": "https://arxiv.org/abs/2207.12598",
+    "title": "Classifier-Free Diffusion Guidance",
+    "date": "2022-07-26",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2204.03458",
+    "url": "https://arxiv.org/abs/2204.03458",
+    "title": "Video Diffusion Models",
+    "date": "2022-04-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 5,
+    "id": "2212.09748",
+    "url": "https://arxiv.org/abs/2212.09748",
+    "title": "Scalable Diffusion Models with Transformers (DiT)",
+    "date": "2022-12-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "openai-sora",
+    "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+    "title": "Video generation models as world simulators (Sora)",
+    "date": "2024-02-15",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "2405.04233",
+    "url": "https://arxiv.org/abs/2405.04233",
+    "title": "Vidu: a Highly Consistent, Dynamic and Skilled Text-to-Video Generator with Diffusion Models",
+    "date": "2024-05-07",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2312.06662",
+    "url": "https://arxiv.org/abs/2312.06662",
+    "title": "Photorealistic Video Generation with Diffusion Models (W.A.L.T)",
+    "date": "2023-12-11",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2410.13720",
+    "url": "https://arxiv.org/abs/2410.13720",
+    "title": "Movie Gen: A Cast of Media Foundation Models",
+    "date": "2024-10-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "2503.09642",
+    "url": "https://arxiv.org/abs/2503.09642",
+    "title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+    "date": "2025-03-12",
+    "source": "arxiv"
+  },
+  {
+    "n": 11,
+    "id": "2503.20314",
+    "url": "https://arxiv.org/abs/2503.20314",
+    "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+    "date": "2025-04-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 12,
+    "id": "2312.14125",
+    "url": "https://arxiv.org/abs/2312.14125",
+    "title": "VideoPoet: A Large Language Model for Zero-Shot Video Generation",
+    "date": "2023-12-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 13,
+    "id": "2409.18869",
+    "url": "https://arxiv.org/abs/2409.18869",
+    "title": "Emu3: Next-Token Prediction is All You Need",
+    "date": "2024-09-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 14,
+    "id": "2404.02905",
+    "url": "https://arxiv.org/abs/2404.02905",
+    "title": "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction (VAR)",
+    "date": "2024-04-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 15,
+    "id": "2405.09818",
+    "url": "https://huggingface.co/papers/2405.09818",
+    "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models",
+    "date": "2024-05-16",
+    "source": "hf-search"
+  },
+  {
+    "n": 16,
+    "id": "2408.11039",
+    "url": "https://arxiv.org/abs/2408.11039",
+    "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
+    "date": "2024-08-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 17,
+    "id": "gpt4o-image-openai",
+    "url": "https://openai.com/index/introducing-4o-image-generation/",
+    "title": "Introducing 4o Image Generation",
+    "date": "2025-03-25",
+    "source": "web"
+  },
+  {
+    "n": 18,
+    "id": "gpt4o-image-systemcard",
+    "url": "https://openai.com/index/gpt-4o-image-generation-system-card-addendum/",
+    "title": "Addendum to GPT-4o System Card: 4o image generation",
+    "date": "2025-03-25",
+    "source": "web"
+  },
+  {
+    "n": 19,
+    "id": "gemini-image-generation-docs",
+    "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+    "title": "Nano Banana image generation (Gemini API docs)",
+    "date": "2026-02-26",
+    "source": "web"
+  },
+  {
+    "n": 20,
+    "id": "2404.12391",
+    "url": "https://arxiv.org/abs/2404.12391",
+    "title": "On the Content Bias in Frechet Video Distance",
+    "date": "2024-04-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 21,
+    "id": "1812.01717",
+    "url": "https://arxiv.org/abs/1812.01717",
+    "title": "Towards Accurate Generative Models of Video: A New Metric & Challenges (FVD)",
+    "date": "2018-12-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 22,
+    "id": "2410.05203",
+    "url": "https://arxiv.org/abs/2410.05203",
+    "title": "Beyond FVD: Enhanced Evaluation Metrics for Video Generation Quality",
+    "date": "2024-10-07",
+    "source": "arxiv"
+  },
+  {
+    "n": 23,
+    "id": "2311.17982",
+    "url": "https://arxiv.org/abs/2311.17982",
+    "title": "VBench: Comprehensive Benchmark Suite for Video Generative Models",
+    "date": "2023-11-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 24,
+    "id": "2503.21755",
+    "url": "https://arxiv.org/abs/2503.21755",
+    "title": "VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness",
+    "date": "2025-03-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 25,
+    "id": "2406.15252",
+    "url": "https://arxiv.org/abs/2406.15252",
+    "title": "VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation",
+    "date": "2024-06-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 26,
+    "id": "2406.03520",
+    "url": "https://arxiv.org/abs/2406.03520",
+    "title": "VideoPhy: Evaluating Physical Commonsense for Video Generation",
+    "date": "2024-06-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 27,
+    "id": "2503.06800",
+    "url": "https://arxiv.org/abs/2503.06800",
+    "title": "VideoPhy-2: A Challenging Action-Centric Physical Commonsense Evaluation in Video Generation",
+    "date": "2025-03-09",
+    "source": "arxiv"
+  },
+  {
+    "n": 28,
+    "id": "2501.09038",
+    "url": "https://arxiv.org/abs/2501.09038",
+    "title": "Do generative video models understand physical principles? (Physics-IQ)",
+    "date": "2025-02-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 29,
+    "id": "2411.02385",
+    "url": "https://arxiv.org/abs/2411.02385",
+    "title": "How Far Is Video Generation from World Model: A Physical Law Perspective",
+    "date": "2024-11-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 30,
+    "id": "2209.14792",
+    "url": "https://arxiv.org/abs/2209.14792",
+    "title": "Make-A-Video: Text-to-Video Generation without Text-Video Data",
+    "date": "2022-09-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 31,
+    "id": "2210.02303",
+    "url": "https://arxiv.org/abs/2210.02303",
+    "title": "Imagen Video: High Definition Video Generation with Diffusion Models",
+    "date": "2022-10-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 32,
+    "id": "2104.10157",
+    "url": "https://arxiv.org/abs/2104.10157",
+    "title": "VideoGPT: Video Generation using VQ-VAE and Transformers",
+    "date": "2021-04-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 33,
+    "id": "2111.12417",
+    "url": "https://arxiv.org/abs/2111.12417",
+    "title": "NUWA: Visual Synthesis Pre-training for Neural visUal World creAtion",
+    "date": "2021-11-24",
+    "source": "arxiv"
+  },
+  {
+    "n": 34,
+    "id": "2210.02399",
+    "url": "https://arxiv.org/abs/2210.02399",
+    "title": "Phenaki: Variable Length Video Generation from Open Domain Textual Descriptions",
+    "date": "2022-10-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 35,
+    "id": "2212.05199",
+    "url": "https://arxiv.org/abs/2212.05199",
+    "title": "MAGVIT: Masked Generative Video Transformer",
+    "date": "2022-12-10",
+    "source": "arxiv"
+  },
+  {
+    "n": 36,
+    "id": "2310.05737",
+    "url": "https://arxiv.org/abs/2310.05737",
+    "title": "Language Model Beats Diffusion -- Tokenizer is Key to Visual Generation (MAGVIT-v2)",
+    "date": "2023-10-09",
+    "source": "arxiv"
+  },
+  {
+    "n": 37,
+    "id": "2303.01469",
+    "url": "https://arxiv.org/abs/2303.01469",
+    "title": "Consistency Models",
+    "date": "2023-03-02",
+    "source": "arxiv"
+  },
+  {
+    "n": 38,
+    "id": "2310.04378",
+    "url": "https://arxiv.org/abs/2310.04378",
+    "title": "Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference",
+    "date": "2023-10-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 39,
+    "id": "2210.02747",
+    "url": "https://arxiv.org/abs/2210.02747",
+    "title": "Flow Matching for Generative Modeling",
+    "date": "2023-02-08",
+    "source": "arxiv"
+  },
+  {
+    "n": 40,
+    "id": "2403.03206",
+    "url": "https://arxiv.org/abs/2403.03206",
+    "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis (SD3)",
+    "date": "2024-03-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 41,
+    "id": "2401.03048",
+    "url": "https://arxiv.org/abs/2401.03048",
+    "title": "Latte: Latent Diffusion Transformer for Video Generation",
+    "date": "2024-01-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 42,
+    "id": "2402.14797",
+    "url": "https://arxiv.org/abs/2402.14797",
+    "title": "Snap Video: Scaled Spatiotemporal Transformers for Text-to-Video Synthesis",
+    "date": "2024-02-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 43,
+    "id": "2412.04431",
+    "url": "https://arxiv.org/abs/2412.04431",
+    "title": "Infinity: Scaling Bitwise AutoRegressive Modeling for High-Resolution Image Synthesis",
+    "date": "2024-12-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 44,
+    "id": "2311.17042",
+    "url": "https://arxiv.org/abs/2311.17042",
+    "title": "Adversarial Diffusion Distillation",
+    "date": "2023-11-28",
+    "source": "arxiv"
+  },
+  {
+    "n": 45,
+    "id": "2403.12015",
+    "url": "https://arxiv.org/abs/2403.12015",
+    "title": "Fast High-Resolution Image Synthesis with Latent Adversarial Diffusion Distillation",
+    "date": "2024-03-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 46,
+    "id": "2412.15689",
+    "url": "https://arxiv.org/abs/2412.15689",
+    "title": "DOLLAR: Few-Step Video Generation via Distillation and Latent Reward Optimization",
+    "date": "2024-12-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 47,
+    "id": "2309.15505",
+    "url": "https://arxiv.org/abs/2309.15505",
+    "title": "Finite Scalar Quantization: VQ-VAE Made Simple",
+    "date": "2023-09-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 48,
+    "id": "2408.12528",
+    "url": "https://huggingface.co/papers/2408.12528",
+    "title": "Show-o: One Single Transformer to Unify Multimodal Understanding and Generation",
+    "date": "2024-08-22",
+    "source": "hf-search"
+  },
+  {
+    "n": 49,
+    "id": "2402.12226",
+    "url": "https://huggingface.co/papers/2402.12226",
+    "title": "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling",
+    "date": "2024-02-19",
+    "source": "hf-search"
+  },
+  {
+    "n": 50,
+    "id": "2406.09406",
+    "url": "https://huggingface.co/papers/2406.09406",
+    "title": "4M-21: An Any-to-Any Vision Model for Tens of Tasks and Modalities",
+    "date": "2024-06-13",
+    "source": "hf-search"
+  },
+  {
+    "n": 51,
+    "id": "2501.17811",
+    "url": "https://arxiv.org/abs/2501.17811",
+    "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+    "date": "2025-01-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 52,
+    "id": "janus-pro-model-card",
+    "url": "https://huggingface.co/deepseek-ai/Janus-Pro-7B",
+    "title": "Janus-Pro-7B (model card)",
+    "date": "2025-01-27",
+    "source": "web"
+  },
+  {
+    "n": 53,
+    "id": "nano-banana-pro-blog",
+    "url": "https://blog.google/innovation-and-ai/products/nano-banana-pro/",
+    "title": "Introducing Nano Banana Pro",
+    "date": "2025-11-20",
+    "source": "web"
+  },
+  {
+    "n": 54,
+    "id": "2104.11178",
+    "url": "https://arxiv.org/abs/2104.11178",
+    "title": "VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text",
+    "date": "2021-04-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 55,
+    "id": "cosmos-nvidia",
+    "url": "https://www.nvidia.com/en-us/ai/cosmos/",
+    "title": "Physical AI with World Foundation Models | NVIDIA Cosmos",
+    "date": "2025-01-06",
+    "source": "web"
+  },
+  {
+    "n": 56,
+    "id": "cosmos-newsroom",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
+    "title": "NVIDIA Launches Cosmos World Foundation Model Platform",
+    "date": "2025-01-06",
+    "source": "web"
+  },
+  {
+    "n": 57,
+    "id": "cosmos-wfm-paper",
+    "url": "https://arxiv.org/abs/2501.03575",
+    "title": "Cosmos World Foundation Model Platform for Physical AI",
+    "date": "2025-01-07",
+    "source": "arxiv"
+  },
+  {
+    "n": 58,
+    "id": "animatediff-diffusers",
+    "url": "https://huggingface.co/docs/diffusers/main/en/api/pipelines/animatediff",
+    "title": "Text-to-Video Generation with AnimateDiff (Hugging Face diffusers docs)",
+    "date": "2023-07-10",
+    "source": "web"
+  },
+  {
+    "n": 59,
+    "id": "2510.12784",
+    "url": "https://huggingface.co/papers/2510.12784",
+    "title": "SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models",
+    "date": "2025-10-14",
+    "source": "hf-daily"
+  },
+  {
+    "n": 60,
+    "id": "2310.11440",
+    "url": "https://arxiv.org/abs/2310.11440",
+    "title": "EvalCrafter: Benchmarking and Evaluating Large Video Generation Models",
+    "date": "2023-10-17",
+    "source": "arxiv"
+  },
+  {
+    "n": 61,
+    "id": "2311.01813",
+    "url": "https://arxiv.org/abs/2311.01813",
+    "title": "FETV: A Benchmark for Fine-Grained Evaluation of Open-Domain Text-to-Video Generation",
+    "date": "2023-11-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 62,
+    "id": "2407.14505",
+    "url": "https://arxiv.org/abs/2407.14505",
+    "title": "T2V-CompBench: A Comprehensive Benchmark for Compositional Text-to-video Generation",
+    "date": "2024-07-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 63,
+    "id": "2406.13743",
+    "url": "https://arxiv.org/abs/2406.13743",
+    "title": "GenAI-Bench: Evaluating and Improving Compositional Text-to-Visual Generation",
+    "date": "2024-06-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 64,
+    "id": "panda-70m",
+    "url": "https://arxiv.org/abs/2402.19479",
+    "title": "Panda-70M: Captioning 70M Videos with Multiple Cross-Modality Teachers",
+    "date": "2024-02-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 65,
+    "id": "2307.06942",
+    "url": "https://arxiv.org/abs/2307.06942",
+    "title": "InternVid: A Large-scale Video-Text Dataset for Multimodal Understanding and Generation",
+    "date": "2023-07-13",
+    "source": "arxiv"
+  },
+  {
+    "n": 66,
+    "id": "dalle3-captioner",
+    "url": "https://cdn.openai.com/papers/dall-e-3.pdf",
+    "title": "Improving Image Generation with Better Captions (DALL-E 3)",
+    "date": "2023-10-01",
+    "source": "web"
+  },
+  {
+    "n": 67,
+    "id": "sio-csam-report",
+    "url": "https://stacks.stanford.edu/file/kh752sm9123/ml_training_data_csam_report-2023-12-23.pdf",
+    "title": "Identifying and Eliminating CSAM in Generative ML Training Data and Models (SIO report)",
+    "date": "2023-12-23",
+    "source": "web"
+  },
+  {
+    "n": 68,
+    "id": "laion-safety-review",
+    "url": "https://laion.ai/notes/laion-maintenance",
+    "title": "Safety Review for LAION 5B (LAION statement)",
+    "date": "2023-12-20",
+    "source": "web"
+  },
+  {
+    "n": 69,
+    "id": "getty-judgment",
+    "url": "https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf",
+    "title": "Getty Images v Stability AI (High Court judgment)",
+    "date": "2025-11-04",
+    "source": "web"
+  },
+  {
+    "n": 70,
+    "id": "deepmind-genie3",
+    "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+    "title": "Genie 3: A new frontier for world models",
+    "date": "2025-08-05",
+    "source": "web"
+  },
+  {
+    "n": 71,
+    "id": "worldlabs-marble",
+    "url": "https://www.worldlabs.ai/blog/marble-world-model",
+    "title": "Marble: A Multimodal World Model",
+    "date": "2025-11-12",
+    "source": "web"
+  },
+  {
+    "n": 72,
+    "id": "2508.05635",
+    "url": "https://huggingface.co/papers/2508.05635",
+    "title": "Genie Envisioner: A Unified World Foundation Platform for Robotic Manipulation",
+    "date": "2025-08-07",
+    "source": "hf-search"
+  },
+  {
+    "n": 73,
+    "id": "2402.17177",
+    "url": "https://arxiv.org/abs/2402.17177",
+    "title": "Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models",
+    "date": "2024-02-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 74,
+    "id": "repro-llm-corpus",
+    "url": "https://dl.acm.org/doi/full/10.1145/3820002.3828584",
+    "title": "Measuring Reproducibility in LLM Research: A Rubric and Cross-Topic Corpus Study",
+    "date": "2026-09-24",
+    "source": "web"
+  },
+  {
+    "n": 75,
+    "id": "synthid-detector-blog",
+    "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/",
+    "title": "SynthID Detector - a new portal to help identify AI-generated content",
+    "date": "2025-05-20",
+    "source": "web"
+  },
+  {
+    "n": 76,
+    "id": "c2pa-spec",
+    "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+    "title": "Content Credentials: C2PA Technical Specification v2.4",
+    "date": "2025-01-01",
+    "source": "web"
+  },
+  {
+    "n": 77,
+    "id": "sora2-systemcard",
+    "url": "https://openai.com/index/sora-2-system-card/",
+    "title": "Sora 2 System Card",
+    "date": "2025-09-30",
+    "source": "web"
+  },
+  {
+    "n": 78,
+    "id": "deepmind-veo",
+    "url": "https://deepmind.google/models/veo/",
+    "title": "Veo - Google DeepMind",
+    "date": "2025-10-01",
+    "source": "web"
+  },
+  {
+    "n": 79,
+    "id": "eu-art50-faq",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "title": "Transparency obligations under Article 50 of the AI Act (European Commission FAQ)",
+    "date": "2025-07-01",
+    "source": "web"
+  },
+  {
+    "n": 80,
+    "id": "ncsl-deepfakes",
+    "url": "https://www.ncsl.org/elections-and-campaigns/artificial-intelligence-ai-in-elections-and-campaigns",
+    "title": "Artificial Intelligence (AI) in Elections and Campaigns (NCSL)",
+    "date": "2025-06-01",
+    "source": "web"
+  }
+]
